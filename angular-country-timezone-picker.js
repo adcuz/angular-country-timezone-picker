@@ -19,7 +19,7 @@ angular.module('angular-country-timezone-picker', [])
 
 })
 
-.directive('countryTimezonePickerTimezone', function(countryTimezonePickerService, $timeout) {
+.directive('countryTimezonePickerTimezone', function(countryTimezonePickerService, $filter) {
     
     return {
         template: '<select ng-model="selectedValue" ng-options="timezone.name as timezone.displayName for timezone in timezones" required="isRequired"></select>',
@@ -35,18 +35,22 @@ angular.module('angular-country-timezone-picker', [])
                
                 scope.timezones = countryTimezonePickerService.countryTimezones(country); 
                 
-                if (scope.timezones.length > 0) {
+                if (scope.timezones.length > 0 
+                    && $filter('filter')(scope.selectedValue, { name: scope.selectedValue }).length === 0) {
                     scope.selectedValue = scope.timezones[0].name;
                 }
                                
+                console.log(scope.selectedValue);
             });
             
             if (scope.selectedCountry) {
                 scope.timezones = countryTimezonePickerService.countryTimezones(scope.selectedCountry); 
                 
-                if (scope.timezones.length > 0) {
+                if (scope.timezones.length > 0 
+                    && $filter('filter')(scope.selectedValue, { name: scope.selectedValue }).length === 0) {
                     scope.selectedValue = scope.timezones[0].name;
                 }
+                
             }
             
         }
