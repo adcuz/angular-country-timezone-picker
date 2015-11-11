@@ -39,8 +39,6 @@ angular.module('angular-country-timezone-picker', [])
                     && $filter('filter')(scope.selectedValue, { name: scope.selectedValue }).length === 0) {
                     scope.selectedValue = scope.timezones[0].name;
                 }
-                               
-                console.log(scope.selectedValue);
             });
             
             if (scope.selectedCountry) {
