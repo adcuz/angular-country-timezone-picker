@@ -2,6 +2,8 @@
 
 AngularJS directive to generate a list of countries as options of the select element. Additionally you can have an automatically updating select input for time zone.
 
+### [Demo](http://plnkr.co/edit/4BXNap?p=preview)
+
 ## Installation
 
 You can install the directive using [Bower](http://bower.io/):
