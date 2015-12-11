@@ -1,4 +1,4 @@
-# angular-country-picker
+# angular-country-timezone-picker
 
 AngularJS directive to generate a list of countries as options of the select element. Additionally you can have an automatically updating select input for time zone.
 
