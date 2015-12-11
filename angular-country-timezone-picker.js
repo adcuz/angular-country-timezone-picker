@@ -1448,7 +1448,17 @@ angular.module('angular-country-timezone-picker', [])
            ]
         },
         {
-           "name":"Ireland",
+           "name":"Northern Ireland",
+           "code":"GB",
+           "timezones":[
+              {
+                 "name":"Europe\/Dublin",
+                 "displayName":"Europe\/Dublin"
+              }
+           ]
+        },
+        {
+           "name":"Republic of Ireland",
            "code":"IE",
            "timezones":[
               {
