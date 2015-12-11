@@ -9,3 +9,15 @@ You can install the directive using [Bower](http://bower.io/):
 ```bash
 $ bower install angular-country-timezone-picker
 ```
+
+## Usage
+
+### The country picker
+```html
+<country-timezone-picker-countries country-model="countryModel" class="form-control input-lg"></country-timezone-picker-countries>
+```
+
+### The timezone picker
+```html
+<country-timezone-picker-timezone country-model="countryModel" timezone-model="timezoneModel" class="form-control input-lg"></country-timezone-picker-timezone>
+```
